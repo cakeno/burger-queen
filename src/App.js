@@ -1,8 +1,8 @@
 import React from "react"
 import firebase from './firebaseConfig'
-import Login from "./components/Login"
-import Hall from "./components/Hall"
-import Kitchen from "./components/Kitchen"
+import Login from "./Login"
+import Hall from "./Hall"
+import Kitchen from "./Kitchen"
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends React.Component {
@@ -36,8 +36,8 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <Route exact path="/salão" component={Hall} />
-          <Route exact path="/cozinha" component={Kitchen} />
+          <Route exact path="/salao/?:id" component={Hall} />
+          <Route exact path="/cozinha/?:id" component={Kitchen} />
           <Route exact path="/" component={Login} />
         </Router>
       </>
